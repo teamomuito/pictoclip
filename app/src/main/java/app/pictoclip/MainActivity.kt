@@ -6,6 +6,7 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Intent
 import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.GradientDrawable
 import android.os.Build
 import android.os.Bundle
@@ -125,7 +126,7 @@ class MainActivity : Activity() {
         val list = ListView(this).apply {
             divider = null
             dividerHeight = 0
-            selector = null
+            setSelector(ColorDrawable(Color.TRANSPARENT))
             setBackgroundColor(Color.TRANSPARENT)
             clipToPadding = false
             overScrollMode = View.OVER_SCROLL_NEVER
